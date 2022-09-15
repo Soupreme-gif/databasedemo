@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danny boi's vet clinic</title>
+</head>
+<body>
+<h1>Patients</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Age</th>
+    </tr>
+</table>
+<tr th:each="pet : ${petList}">
+    <td th:text="${pet.name}">Name</td>
+    <td th:text="${pet.species}">Species</td>
+    <td th:text="${pet.age}">Age</td>
+</tr>
+</body>
+</html>
